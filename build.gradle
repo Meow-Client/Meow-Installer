@@ -1,0 +1,26 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'java'
+}
+
+group 'club.meowclient.installer'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
+
+jar {
+    manifest {
+        attributes('Main-Class' : 'club.meowclient.installer.Main')
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
